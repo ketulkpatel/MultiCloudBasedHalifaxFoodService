@@ -1,0 +1,47 @@
+/**
+ * Triggered from a message on a Cloud Pub/Sub topic.
+ *
+ * @param {!Object} event Event payload.
+ * @param {!Object} context Metadata for the event.
+ */
+
+//dependency and configurations to connect to firebase admin
+const admin = require('firebase-admin');
+admin.initializeApp({credential:admin.credential.applicationDefault(),});
+const db = admin.firestore();
+//initializing the collection
+const collection = 'chatroom-data';
+//this is the starting point of the function which gets triggered as soon as a message is published in the queue , as this subscriber type is "PUSH"
+exports.helloPubSub = async (event, context) => {
+  //converts the data field of event back into json , as the messages published to the topics have to be in base 64 form.
+  const message = event.data
+    ? Buffer.from(event.data, 'base64').toString()
+    : 'Hello, World';
+
+  console.log(message)
+  //parsing the json data and getting an object back
+  const complaint = JSON.parse(message)  
+  console.log(complaint)
+  const chatroomID= complaint.uuid;
+  console.log(chatroomID)
+  const restaurantId = complaint.restaurant;
+  console.log(restaurantId)
+  const customerId = complaint.customer;
+  console.log(customerId)
+  const str = complaint.complaint_string
+  console.log(str)
+
+  //adds the details in the chatroom-data collection
+  try{
+    await db.collection(collection).doc(chatroomID).set({
+      chatroomID,
+      restaurantId,
+      customerId,
+      str
+    });
+    return
+  }catch(error){
+    console.log(error);
+    return
+  }
+};

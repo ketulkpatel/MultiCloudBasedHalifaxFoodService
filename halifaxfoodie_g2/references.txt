@@ -1,0 +1,22 @@
+# Lambda Code Reference:
+verify - https://github.com/venkateshkodumuri/Lex_Chatbot_to_fetch_data_from_dynamodb/blob/main/lambda_function.py
+verify - https://github.com/PradipNichite/Youtube-Tutorials/blob/main/Amazon_Lex/Part2.py
+lambda - https://github.com/fireship-io/react-firebase-chat/blob/master/src/App.js
+lambda - https://www.youtube.com/watch?v=zQyrwxMPm88
+
+Data processing references:
+boto3 - https://dynobase.dev/dynamodb-python-with-boto3/
+upload and extract - https://stackoverflow.com/questions/60738190/regular-expression-to-find-a-series-of-uppercase-words-in-a-string
+upload - https://javascript.plainenglish.io/how-to-upload-files-to-aws-s3-in-react-591e533d615e
+regex - https://medium.com/@gulikholmatova/building-a-serverless-react-app-using-aws-lambda-dynamodb-and-an-api-gateway-f846696f34cd
+
+GCP pub sub :
+publish : https://cloud.google.com/pubsub/docs/publisher#rest
+publish method reference : https://stackoverflow.com/questions/63097121/how-to-use-pubsub-rest-api-with-google-service-accounts
+firebase add data reference : https://firebase.google.com/docs/database/admin/save-data
+
+# Lambda Code Reference:
+verify - https://github.com/venkateshkodumuri/Lex_Chatbot_to_fetch_data_from_dynamodb/blob/main/lambda_function.py
+verify - https://github.com/PradipNichite/Youtube-Tutorials/blob/main/Amazon_Lex/Part2.py
+lambda - https://github.com/fireship-io/react-firebase-chat/blob/master/src/App.js
+lambda - https://www.youtube.com/watch?v=zQyrwxMPm88
